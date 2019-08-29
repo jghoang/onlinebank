@@ -1,4 +1,4 @@
-package com.meritamerica.onlinebank;
+package com.team3.bankApp;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
