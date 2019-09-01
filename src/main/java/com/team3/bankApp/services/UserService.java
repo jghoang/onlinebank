@@ -18,4 +18,10 @@ public class UserService {
 	public List<User> allUsers(){
 		return userRepo.findAll();
 	}
+	public void addUser(User user) {
+		userRepo.save(user);
+	}
+	public void deleteUser(Long id) {
+		userRepo.deleteById(id);
+	}
 }

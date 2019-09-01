@@ -18,4 +18,13 @@ public class AccountService {
 	public List<Account> allAccounts(){
 		return acntRepo.findAll();
 	}
+//	public void addAccount(Account account) {
+//		account.setNumber(newNumber);
+//		newNumber = String.format("%06d", Integer.parseInt(newNumber)+1);
+//		acntRepo.save(account);
+//	}
+	
+	public void deleteAccount(Long id) {
+		acntRepo.deleteById(id);
+	}
 }
