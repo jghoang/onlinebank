@@ -27,4 +27,9 @@ public class BankController {
 		return "index.jsp";
 	}
 	
+	@RequestMapping("/registerAccount") // Goes to home (login) page
+	public String registerAccount() {
+		return "registerAccount.jsp";
+	}
+	
 }
