@@ -32,10 +32,8 @@ public class User {
 	@Size(min = 8, max = 45)
 	private String password;
 	@Size(min = 10, max = 225)
-	private String address; // Create separate table for address. i.e. int streetNumber, String streetName, etc.
-	@Size(max = 11)
+	private String address;
 	private int phoneNumber;
-	@Size(max = 11)
 	private int ssn;
 	@Column(updatable = false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")

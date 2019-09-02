@@ -23,9 +23,9 @@ public class Account {
 	Long id;
 	@Size(min = 5, max = 45)
 	private String accountType;
-	@Max(11) // Changed from VARCHAR to Long
+	@Max(11)
 	private Long accountNumber;
-	@Max(11) // Changed from VARCHAR to Long
+	@Max(11) 
 	private Long accountBalance;
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")

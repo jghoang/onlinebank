@@ -10,5 +10,7 @@
 
 
 <h1> In Progress!</h1>
+<p>&lt;&lt; username / email and password login page &gt;&gt; </p>
+<!--  Redirect to dashboard, if DNE create dashboard.jsp -->
 </body>
 </html>
