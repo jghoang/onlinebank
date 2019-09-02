@@ -1,12 +1,15 @@
 package com.team3.bankApp.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -41,6 +44,9 @@ public class User {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date updatedAt;
 	
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+	private List<Account> accounts;
+	
 	public User() {
 	}
 	
@@ -55,17 +61,6 @@ public class User {
 		this.phoneNumber = phoneNumber;
 		this.ssn = ssn;		
 	}
-
-		/* Link tables:
-	 * @OneToOne(fetch = FetchType.LAZY, mappedBy="users")
-	 * private Account accounts;
-	 *
-	 * From Account:
-	 * @OneToOne(fetch = FetchType.LAZY)
-	 * @JoinColumn(name = "user_id")
-	 * private User users;
-	 * 
-	 */
 	
 	// Getters and setters
 	public Long getId() {

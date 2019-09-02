@@ -1,12 +1,17 @@
 package com.team3.bankApp.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -27,6 +32,23 @@ public class Account {
 	private Long accountNumber;
 	@Max(11) 
 	private Long accountBalance;
+	
+	private Boolean active;
+	@OneToMany(mappedBy="account", fetch = FetchType.LAZY)
+	private List<Transaction> transactions;
+	
+	/* Link tables:
+ *
+ * From Account:
+ * @OneToOne(fetch = FetchType.LAZY)
+ * @JoinColumn(name = "user_id")
+ * private User users;
+ * 
+ */
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id")
+	private User user;
+	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date createdAt;
