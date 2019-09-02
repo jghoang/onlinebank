@@ -1,8 +1,14 @@
 package com.team3.bankApp.controllers;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.team3.bankApp.models.Account;
+import com.team3.bankApp.models.User;
 import com.team3.bankApp.services.AccountService;
 import com.team3.bankApp.services.TransactionService;
 import com.team3.bankApp.services.UserService;
@@ -27,9 +33,26 @@ public class BankController {
 		return "index.jsp";
 	}
 	
-	@RequestMapping("/registerAccount") // Goes to home (login) page
+	@RequestMapping("/registerAccount")
 	public String registerAccount() {
 		return "registerAccount.jsp";
+	}
+	
+//	@RequestMapping("/account/new")
+//	public String showAddAccount(Model model, @ModelAttribute("account") Account account) {
+//		List<User> users = userService.allUsers();
+//		model.addAttribute("users", users);
+//		return "addAccount.jsp";
+//	}
+	
+	@RequestMapping("/account/checking")
+	public String checkingact() {
+		return "checking.jsp";
+	}
+	
+	@RequestMapping("/account/saving")
+	public String savingact() {
+		return "saving.jsp";
 	}
 	
 }
