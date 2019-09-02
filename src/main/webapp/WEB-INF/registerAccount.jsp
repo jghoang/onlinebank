@@ -19,16 +19,17 @@
                     <td colspan="2">
                         <h2 align=center>Create New Account</h2>
                     </td>
-
-                </tr>
-                <br><br>
-                <span>Select the type of account you want to Create:</span>
-                <select>
-		            <option>Personal Checking</option>
-		            <option>DBA</option>
-		            <option>IRA</option>
-		        </select>
-
+         		</tr>
+                <tr>
+                	<td>
+		                <span>Select the type of account you want to Create:</span>
+		                <select>
+				            <option>Personal Checking</option>
+				            <option>DBA</option>
+				            <option>IRA</option>
+				        </select>
+			        </td>
+				</tr>
                 <tr>
                     <td><label for="first_name">First Name:</label></td>
                     <td><input type="text" id="first_name" name="first_name " size="20"></td>

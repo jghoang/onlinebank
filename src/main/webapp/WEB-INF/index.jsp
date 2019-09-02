@@ -4,11 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home Page</title>
 </head>
 <body>
 
 
 <h1> In Progress!</h1>
+<p>&lt;&lt; username / email and password login page &gt;&gt; </p>
+<!--  Redirect to dashboard, if DNE create dashboard.jsp -->
 </body>
 </html>
