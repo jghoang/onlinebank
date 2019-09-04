@@ -53,13 +53,13 @@ public class BankController {
 //		return "addAccount.jsp";
 //	}
 	
-	@RequestMapping("/account/checking")
-	public String checkingact() {
+	@RequestMapping("account/checking")
+	public String checkingAct() {
 		return "checking.jsp";
 	}
 	
 	@RequestMapping("/account/saving")
-	public String savingact() {
+	public String savingAct() {
 		return "saving.jsp";
 	}
 	
@@ -87,7 +87,7 @@ public class BankController {
 		else {
 			System.out.println("New User Created!"); // Print success in console
 			userService.addUser(user);
-			return "redirect:"; // **** Fix redirect ****
+			return "redirect:"; // **** to accountHome.jsp **** will list out ALL accounts
 		}
 	}
 	
