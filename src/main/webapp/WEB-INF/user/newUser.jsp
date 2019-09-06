@@ -11,7 +11,7 @@
 <body>
 
 	<h1 style="text-align:center;">Create New User Page</h1>
-	<form:form action="" method="post" modelAttribute="user">
+	<form:form action="/dashboard" method="post" modelAttribute="user">
 		<table>
 			<tr>
 				<td>
@@ -68,6 +68,14 @@
 					<form:errors path="password"/>
 					<form:password path="password"/>	
 				</td>
+			</tr>
+			<tr>
+				<form:select path="accounts">Account type:
+					<form:errors path="accounts"/>
+					<form:option value="Personal Checking"/>
+					<form:option value="DBA"/>
+					<form:option value="IRA"/>
+				</form:select>
 			</tr>
 			<tr>
 				<td>
