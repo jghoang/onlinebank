@@ -86,13 +86,13 @@ public class BankController {
 	
 	@RequestMapping("account/addNew/checking") // Create new checking account
 	public String checkingAct() {
-		return "checking.jsp";
+		return "checkingAcc.jsp";
 	}
 
 	
 	@RequestMapping("/account/addNew/saving")
 	public String savingAct() {
-		return "saving.jsp";
+		return "savingAcc.jsp";
 	}
 	
 

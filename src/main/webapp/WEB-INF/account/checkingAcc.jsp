@@ -22,7 +22,7 @@
             <div id="photo"><img src="https://i.ibb.co/5hSxn1H/chekinglogo.png"></div>
             <div id="info">
                 <h1 id="title">Checking Accounts</h1>
-                <h3 id="welcome">Welcome (User),</h3>
+                <h3 id="welcome">Welcome <c:out value="${currentUser.username}",</h3>
                 <h3>Please Select your Account</h3>
 
             </div>
