@@ -1,4 +1,0 @@
-Jen
-Ricky
-Jonatan
-Reza

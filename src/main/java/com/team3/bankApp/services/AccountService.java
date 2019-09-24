@@ -31,7 +31,6 @@ public class AccountService {
 	
 
 	
-	
 	public void deleteAccount(Long id) {
 		acntRepo.deleteById(id);
 	}
