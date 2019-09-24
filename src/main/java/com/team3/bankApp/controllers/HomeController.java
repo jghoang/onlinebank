@@ -26,4 +26,9 @@ public class HomeController { // controller for navbar links
 		return "invest.jsp";
 	}
 	
+	@RequestMapping("/CertificateOfDeposit")
+	public String CertificateOfDeposit() {
+		return "CertificateOfDeposit.jsp";
+	}
+	
 }

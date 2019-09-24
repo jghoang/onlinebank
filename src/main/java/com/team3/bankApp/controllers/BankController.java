@@ -95,6 +95,11 @@ public class BankController {
 		return "savingAcc.jsp";
 	}
 	
+	@RequestMapping("/account/addNew/CertificateOfDeposit")
+	public String CertificateOfDeposit() {
+		return "CertificateOfDeposit.jsp";
+	}
+	
 
 	
 	

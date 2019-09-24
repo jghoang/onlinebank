@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav cleass="headernav">
+    <nav class="headernav">
         <div id="header" style="height: 90px;">
             <div id="headerleft"><img src="https://i.ibb.co/ctc8qGX/logo.png" style="width: 100px;"></div>
             <div id="nav1"><a href="">Saving Accounts</a></div>
@@ -22,7 +22,7 @@
             <div id="photo"><img src="https://i.ibb.co/5hSxn1H/chekinglogo.png"></div>
             <div id="info">
                 <h1 id="title">Checking Accounts</h1>
-                <h3 id="welcome">Welcome <c:out value="${currentUser.username}",</h3>
+                <h2> id="welcome">Welcome c:out value="${currentUser.username}",</h2>
                 <h3>Please Select your Account</h3>
 
             </div>

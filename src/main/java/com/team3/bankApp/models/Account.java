@@ -32,33 +32,36 @@ public class Account {
 	private Long accountNumber;
 	@Max(11) 
 	private Long accountBalance;
-	
+	private double balance;
+	private double rate;
+	private int periods;
+
 	private Boolean active;
 	@OneToMany(mappedBy="account", fetch = FetchType.LAZY)
 	private List<Transaction> transactions;
-	
+
 	/* Link tables:
- *
- * From Account:
- * @OneToOne(fetch = FetchType.LAZY)
- * @JoinColumn(name = "user_id")
- * private User users;
- * 
- */
+	 *
+	 * From Account:
+	 * @OneToOne(fetch = FetchType.LAZY)
+	 * @JoinColumn(name = "user_id")
+	 * private User users;
+	 * 
+	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
 	private User user;
-	
+
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date createdAt;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date updatedAt;
-	
+
 	public Account() {
-		
+
 	}
-	
+
 	//Getters and setters
 
 	public Long getId() {
@@ -108,8 +111,8 @@ public class Account {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
-	
+
+
 	public Boolean getActive() {
 		return active;
 	}
@@ -142,6 +145,51 @@ public class Account {
 	protected void onUpdate() {
 		this.updatedAt = new Date();
 	}
-	
+
+	public void calculate(){        
+		balance = (balance * rate) + balance;        
+	}
+
+	/**
+	 * @return the balance
+	 */
+	public double getBalance() {
+		return balance;
+	}
+
+	/**
+	 * @param balance the balance to set
+	 */
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	/**
+	 * @return the rate
+	 */
+	public double getRate() {
+		return rate;
+	}
+
+	/**
+	 * @param rate the rate to set
+	 */
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
+
+	/**
+	 * @return the periods
+	 */
+	public int getPeriods() {
+		return periods;
+	}
+
+	/**
+	 * @param periods the periods to set
+	 */
+	public void setPeriods(int periods) {
+		this.periods = periods;
+	}
 }
 
