@@ -22,7 +22,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="accounts")
-public class Account {
+public abstract class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;

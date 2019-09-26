@@ -31,11 +31,6 @@ public class BankController {
 	}
 	
 	// Mappings
-	@RequestMapping("") // Goes to home (login) page
-	public String index() {
-		return "index.jsp";
-		// Login "submit" will redirect to dashboard.jsp
-	}
 	
 	@RequestMapping("user/new") // Register process for new user
 	public String registerUser(@ModelAttribute("user") User user) {
@@ -84,18 +79,18 @@ public class BankController {
 		}
 	}
 	
-	@RequestMapping("account/addNew/checking") // Create new checking account
+	@RequestMapping("account/add/checking") // Create new checking account
 	public String checkingAct() {
 		return "checkingAcc.jsp";
 	}
 
 	
-	@RequestMapping("/account/addNew/saving")
+	@RequestMapping("/account/add/saving")
 	public String savingAct() {
 		return "savingAcc.jsp";
 	}
 	
-	@RequestMapping("/account/addNew/CertificateOfDeposit")
+	@RequestMapping("/account/add/CertificateOfDeposit")
 	public String CertificateOfDeposit() {
 		return "CertificateOfDeposit.jsp";
 	}

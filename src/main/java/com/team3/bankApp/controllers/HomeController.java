@@ -6,6 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController { // controller for navbar links
 	
+	@RequestMapping("") // Goes to home (login) page
+	public String index() {
+		return "index.jsp";
+		// Login "submit" will redirect to dashboard.jsp
+	}
+	
 	@RequestMapping("/about")
 	public String about() {
 		return "about.jsp";
@@ -21,7 +27,7 @@ public class HomeController { // controller for navbar links
 		return "savings.jsp";
 	}
 	
-	@RequestMapping("/investments")
+	@RequestMapping("/invest")
 	public String invest() {
 		return "invest.jsp";
 	}
