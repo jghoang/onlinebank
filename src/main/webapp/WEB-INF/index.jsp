@@ -56,7 +56,7 @@
         <div class="section-bottom col-12 ">
             <h4>DISCLAIMER: This is not a real bank.</h4>
             <h5>INVESTMENTS: </h5>
-            <table class="col-12">
+            <table class="col-12 frontpage">
                 <tr>
                     <td>Are Not Insured by Any Federal Government Agency</td>
                     <td>Are Not a Condition to Any Banking Service or Activity</td>

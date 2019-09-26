@@ -25,6 +25,8 @@
 		var el = document.querySelector("a[href='/savings']");
 	} else if (document.URL.search("invest") > 0) {
 		var el = document.querySelector("a[href='/invest']");
+    } else if (document.URL.search("user/new") > 0) {
+        var el = document.querySelector("a[href='/user/new']");
 	} else if (document.URL.search(":8080/$") > 0) {
 		var el = document.querySelector("#home");
     }

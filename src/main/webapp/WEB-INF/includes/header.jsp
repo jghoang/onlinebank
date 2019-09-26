@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
         <a href="/checking">Checking</a>
         <a href="/savings">Savings</a>
         <a href="/invest">Investments</a>
-        <a href="/newUser">Sign Up</a>
+        <a href="/user/new">Sign Up</a>
         <a href="/showUser" class="login">Login</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>

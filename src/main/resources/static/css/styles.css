@@ -190,6 +190,12 @@ input[type=submit] {
     width: 100%;
 }
 
+select {
+	margin-top: 10px;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
 
 /* Sections */
 
@@ -223,8 +229,7 @@ input[type=submit] {
     background-color: white;
 }
 
-table,
-td {
+table.frontpage, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
