@@ -26,26 +26,20 @@
         <br><br>
 		<form:label path="phoneNumber">Phone Number: </form:label> 
 		<form:errors path="phoneNumber"/>
-		<form:input path="phoneNumber"/>	
+		<form:input path="phoneNumber"/>
         <br><br>
 		<form:label path="ssn">Social Security Number: </form:label> 
 		<form:errors path="ssn"/>
-		<form:input path="ssn"/>	
+		<form:input path="ssn"/>
         <br><br>
 		<form:label path="userName">User Name: </form:label> 
 		<form:errors path="userName"/>
-		<form:input path="userName"/>	
+		<form:input path="userName"/>
         <br><br>
 		<form:label path="password">Password: </form:label> 
 		<form:errors path="password"/>
 		<form:password path="password"/>	
         <br><br>
-    	<form:select path="accounts">Account type:
-    		<form:errors path="accounts"/>
-    		<form:option value="Personal Checking"/>
-    		<form:option value="DBA"/>
-    		<form:option value="IRA"/>
-    	</form:select>
 
 		<input type="submit" value="Create New User"/>
 

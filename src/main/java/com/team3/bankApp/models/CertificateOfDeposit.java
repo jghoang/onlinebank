@@ -2,7 +2,6 @@ package com.team3.bankApp.models;
 
 import javax.persistence.Entity;
 
-@Entity
 public class CertificateOfDeposit extends Account {
 	private int length;
 	
@@ -10,7 +9,7 @@ public class CertificateOfDeposit extends Account {
         setBalance(balance);
         setRate(rate);
         setPeriods(periods);
-        setAccountType("certificateOfDeposit");
+        //setAccountType("certificateOfDeposit");
     }
     
 	public CertificateOfDeposit() {
