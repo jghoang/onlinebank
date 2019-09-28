@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -22,16 +23,17 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="accounts")
-public abstract class Account {
+public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 	@Size(min = 5, max = 45)
-	private String accountType;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name = "accountType_id")
+	private AccountType type;
 	@Max(11)
-	private Long accountNumber;
+	private Long number;
 	@Max(11) 
-	private Long accountBalance;
 	private double balance;
 	private double rate;
 	private int periods;
@@ -72,28 +74,20 @@ public abstract class Account {
 		this.id = id;
 	}
 
-	public String getAccountType() {
-		return accountType;
+	public AccountType getType() {
+		return type;
 	}
 
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
+	public void setType(AccountType accountType) {
+		this.type = accountType;
 	}
 
-	public Long getAccountNumber() {
-		return accountNumber;
+	public Long getNumber() {
+		return number;
 	}
 
-	public void setAccountNumber(Long accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-
-	public Long getAccountBalance() {
-		return accountBalance;
-	}
-
-	public void setAccountBalance(Long accountBalance) {
-		this.accountBalance = accountBalance;
+	public void setNumber(Long accountNumber) {
+		this.number = accountNumber;
 	}
 
 	public Date getCreatedAt() {

@@ -48,15 +48,15 @@ public class BankController {
 		else {
 			System.out.println("New User Created!"); // Print success in console
 			userService.addUser(user);
-			return "redirect:"; // **** to accountHome.jsp **** will list out ALL accounts
+			return "redirect:/user/" + user.getId(); // **** to accountHome.jsp **** will list out ALL accounts
 		}
 	}
 	
 	@RequestMapping("user/{id}")
-	public String showUserInfo(@PathVariable("id") Long id, Model model, @ModelAttribute("account") Account account) {
+	public String showUserInfo(@PathVariable("id") Long id, Model model) {
 		User user = userService.findUser(id);
 		model.addAttribute("user", user);
-		return "user/home.jsp"; // Create home.jsp under WEB-INF/user folder
+		return "user/home.jsp";
 	}
 	
 	@RequestMapping("user/{id}/edit") // Update user information
