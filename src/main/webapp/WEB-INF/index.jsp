@@ -1,5 +1,10 @@
 <jsp:include page="includes/header.jsp" />
 
+	<script>
+        alert("Hello, \n Welcome to Merit America Banking Services \n DISCLAIMER: \n This is the Demo Version of banking application ");
+     </script>
+
+
     <div class="row">
         <div class="col-9 col-s-12">
             <h1>Welcome to Merit America Online Bank!</h1>
