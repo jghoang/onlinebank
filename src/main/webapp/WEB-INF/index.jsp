@@ -24,7 +24,7 @@
                     <input type="submit" value="Sign In" />
                 </form>
                 <br>
-                <p>Don't have an account? <span class="enroll"><a href="/newUser">Enroll Today!</a></span></p>
+                <p>Don't have an account? <span class="enroll"><a href="/user/new">Enroll Today!</a></span></p>
             </div>
         </div>
     </div>
