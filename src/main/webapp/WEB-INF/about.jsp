@@ -25,6 +25,8 @@
 	margin-right: 5px;
 	padding-bottom: 10px;
     display: inline-block;
+    border-radius: 15px;
+    margin-top: 10px;
 }
 
 .title {
