@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/* html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+ */
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html, body{
+    font-family: "Lucida Sans", sans-serif;
+  
+}
+
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    background-color: #192f43;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a:not(#logo) {
+    margin-top: 15px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Add an active class to highlight the current page */
+
+.topnav a.active {
+    background-color: #61d6a5;
+    color: white;
+}
+
+
+/* Style the input container */
+
+.topnav .login-container {
+    float: right;
+}
+
+
+/* Style the input field inside the navbar */
+
+.topnav input[type=text],
+.topnav input[type=password] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 150px;
+    /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+
+.topnav .login-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+    background: #ccc;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+    display: none;
+}
+
+
+/* main */
+
+.row {
+    background-color: #e4f5f9;
+}
+.dots.col-9.col-s-10 {
+    text-align: center;
+}
+.dot1,
+.dot2,
+.dot3,
+.dot4 {
+    height: 200px;
+    width: 229px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+   
+}
+
+.dot1 {
+    background-image: url('/img/main1.png');
+    background-repeat: no-repeat;
+}
+
+.dot2 {
+    background-image: url('/img/main2.png');
+    background-repeat: no-repeat;
+}
+
+.dot3 {
+    background-image: url('/img/main3.png');
+    background-repeat: no-repeat;
+}
+
+.dot4 {
+    background-image: url('/img/main4.png');
+    background-repeat: no-repeat;
+}
+/* Sign in box */
+.login-form {
+    margin-left: 10px;
+    background-color: #ffffff;
+    padding: 15px;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+}
+.user-form {
+	float: left;
+	margin-left: 10%;
+}
+.accountform{
+	float: left;
+	margin-left: 20px;
+	
+}
+
+input[type=text],
+input[type=password] {
+    border: 1px solid black;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+}
+
+input[type=submit] {
+    margin-top: 10px;
+    background-color: #61d6a5;
+    font-size: 20px;
+    padding: 10px;
+    width: 60%;
+   
+}
+
+
+/* for about us */
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 266px;
+    float: left;
+    text-align: center;
+    margin: 4px;
+    padding-bottom: 10px;
+}
+.title {
+            color: grey;
+            font-size: 18px;
+        }
+        
+        .card a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+        
+        .card a:hover {
+            opacity: 0.7;
+        }
+        
+/* for checking products page */
+h1, h2, h3 {
+	text-shadow: 2px 3px 0px rgba(0,0,0,0.25);
+	
+}
+
+.flip.col-12.col-s-10 {
+	padding: 10px;
+	text-align: center;
+}
+.cardBox {
+    float: left;
+    font-size: 1.2em;
+    margin: 2% 0 6% 6%;
+    perspective: 800px;
+    transition: all 0.3s ease;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 25%;
+}
+
+.cardBox:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card {
+    border-radius: 25%;
+    background-size: 100%;
+    cursor: default;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 1.4s ease;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+
+.flip-card p {
+    margin-bottom: 1em;
+}
+
+.flip-card .front,
+.flip-card .back {
+    border-radius: 25%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: black;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.flip-card .back {
+    transform: rotateY(180deg);
+}
+
+.flip-card .back a {
+    padding: 0.3em 0.5em;
+    background: #61d6a5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.flip-card .back a:hover {
+    background: #55b2c4;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+}
+
+.cardBox .flip-card .back {
+    background: #fff;
+}
+
+
+.cardBox:nth-child(2) .flip-card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.details {
+    margin-top: 20px;
+    background-image: linear-gradient(-90deg, #4b86a8, #5dc2d6);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    
+}
+.details table td {
+	border-collaspe: collaspe;
+}
+
+/* savings */
+
+#cdinfo {
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	
+}
+
+ .default-button{
+    font-size:16px;
+    border-radius: 4px;
+    padding:7px 12px;
+  }
+  .active-button{
+    background-image: linear-gradient(90deg, #4b86a8, #5dc2d6);
+    color:#fff;
+  }
+  .description{
+    margin-top:20px;
+  }
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+ margin-left: 10%;	
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+#result {
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Sections */
+
+.section-mid {
+    margin-top: 10px;
+    padding: 20px;
+    background-image: linear-gradient(#61d6a5 50%, #55b2c4 50%);
+}
+
+.box {
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 2em;
+}
+
+.box ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.box li {
+    padding-right: 10px;
+}
+
+.checked {
+    color: rgba(255, 211, 68, 0.973);
+}
+
+.section-bottom {
+    background-color: white;
+    padding: 15px;
+}
+
+.section-bottom table
+td {
+  	 border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #374f67;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav #logo {
+        pointer-events: none;
+    }
+    .login-container {
+        display: none;
+    }
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .box ul li {
+        display: block;
+    }
+    .card {
+        width: 100% !important;
+    }
+    .details td {
+    display: inline-block;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    a.login {
+        display: none;
+    }
+}
